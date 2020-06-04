@@ -72,6 +72,7 @@ pipeline {
 
         stage('Wait for S2I build to complete') {
             steps {
+                sleep(60)
                 script {
                     openshift.withCluster() {
                         openshift.withProject( "${DEV_PROJECT}" ) {
