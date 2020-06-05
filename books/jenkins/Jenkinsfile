@@ -61,7 +61,7 @@ pipeline {
                 echo '### Creating a new app in DEV env ###'
                 sh '''
                     oc project ${DEV_PROJECT}
-                    oc new-app --name books nodejs:8~${APP_GIT_URL}\
+                    oc new-app --name books nodejs:latest~${APP_GIT_URL}\
                     --build-env npm_config_registry=${NEXUS_SERVER}\
                     --context-dir ${APP_NAME}
 
@@ -72,7 +72,7 @@ pipeline {
 
         stage('Wait for S2I build to complete') {
             steps {
-                sleep(60)
+                sleep(10)
                 script {
                     openshift.withCluster() {
                         openshift.withProject( "${DEV_PROJECT}" ) {
