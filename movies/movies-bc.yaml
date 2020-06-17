@@ -1,0 +1,15 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: movies-pipeline
+spec:
+  source:
+    contextDir: movies
+    git:
+      ref: movies-pipeline
+      uri: 'https://github.com/thomasGusenleitner/DO288-apps.git'
+    type: Git
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfilePath: Jenkinsfile
+    type: JenkinsPipeline
