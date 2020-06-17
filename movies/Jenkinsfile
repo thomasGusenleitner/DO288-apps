@@ -14,7 +14,7 @@ pipeline {
         DEV_PROJECT = "u717887-movies-dev"
         STAGE_PROJECT = "u717887-movies-stage"
         APP_GIT_URL = "https://github.com/thomasGusenleitner/DO288-apps.git"
-        NEXUS_SERVER = "https://nexus.voestalpine.net/repository/maven-public/"
+        #NEXUS_SERVER = "https://nexus.voestalpine.net/repository/maven-public/"
 
         // DO NOT CHANGE THE GLOBAL VARS BELOW THIS LINE
         APP_NAME = "movies"

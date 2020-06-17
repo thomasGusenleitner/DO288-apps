@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <settings>
+       <!--
         <mirrors>
          <mirror>
          <id>internal-repository</id>
          <name>Maven Repository Manager for classroom</name>
-         <!-- // TODO: Change the url attribute to the nexus proxy server URL for your environment. -->
          <url>https://nexus.voestalpine.net/repository/maven-public/</url>
          <mirrorOf>*</mirrorOf>
          </mirror>
-       </mirrors>
+       </mirrors>-->
 </settings>
